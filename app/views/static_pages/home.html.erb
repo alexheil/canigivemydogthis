@@ -1,0 +1,13 @@
+<div class="container">
+
+  <div class="title padding center">
+    Can I give my dog... ?
+  </div>
+
+  <% @foods.alphabetical.each do |food| %>
+    <div class="center list">
+      <%= link_to food.title, food_path(food) %>
+    </div>
+  <% end %>
+
+</div>

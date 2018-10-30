@@ -1,0 +1,124 @@
+/*
+*= require_tree .
+*= require_self
+*/
+
+$main: #ADF5AD; /* OCEAN GREEN */
+$light: #FFD9B4; /* SPRING RAIN */
+$dark: #FF5C00; /* HOKEY POKEY */
+$black: #212121; /* GREEN KELP */
+$white: #ddd; /* FAFAFA DESERT STORM */
+$fancy: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin transition {
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  &:hover {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: .0125em;
+  font-family: $fancy;
+  font-weight: 300;
+  background: $black;
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  @include transition;
+  color: $main;
+  text-decoration: none;
+  &:hover {
+    color: $dark;
+  }
+}
+
+::selection {
+  color: $white;
+  background: $main;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $main;
+}
+
+.header {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 2vh 0;
+}
+
+.site-title {
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}
+
+.container {
+  width: 40%;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.padding {
+  padding: 7vh 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.yes {
+  font-size: 7em;
+  color: $main;
+}
+
+.no {
+  font-size: 7em;
+  color: $dark;
+}
+
+.depends {
+  font-size: 7em;
+  color: $light;
+}
+
+.description {
+  word-break: break-word;
+  white-space: pre-line;
+  margin-top: -25px;
+}
+
+.small {
+  font-size: .75em;
+}
+
+.list {
+  font-size: 1.5em;
+  padding: 1vh 0;
+}

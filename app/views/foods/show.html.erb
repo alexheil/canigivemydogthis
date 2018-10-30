@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="title padding center thin">
+    <%= link_to "Can I give my dog", root_url, class: "site-title" %> <%= @food.title %>?
+  </div>
+
+  <% if @food.yes? %>
+    <div class="yes padding center bold">
+      <%= @food.answer.upcase %>
+    </div>
+  <% elsif @food.no? %>
+    <div class="no padding center bold">
+      <%= @food.answer.upcase %>
+    </div>
+  <% else %>
+    <div class="depends padding center bold">
+      <%= @food.answer.upcase %>
+    </div>
+  <% end %>
+
+  <div class="description padding thin">
+    <%= @food.description %>
+  </div>
+
+</div>

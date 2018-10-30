@@ -1,0 +1,32 @@
+<%= provide(:title, "Add A Food") %>
+
+<%= form_for(@food, url: foods_path) do |f| %>
+  <span class="food_errors"><%= render 'partials/food_errors' %></span>
+  
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "text-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "text-area" %>
+  </div>
+
+  <div class="flex">
+    <div class="field-three-column">
+      <label class="active-paid-tab" id="yes-tab" for="yes">Yes</label>
+      <span class="hidden"><%= f.radio_button(:answer, "yes", id: "yes", checked: true) %></span>
+    </div>
+    <div class="field-three-column">
+      <label class="inactive-paid-tab" id="no-tab" for="no">No</label>
+      <span class="hidden"><%= f.radio_button(:answer, "no", id: "no") %></span>
+    </div>
+    <div class="field-three-column">
+      <label class="inactive-paid-tab" id="depends-tab" for="depends">Depends</label>
+      <span class="hidden"><%= f.radio_button(:answer, "depends", id: "depends") %></span>
+    </div>
+  </div>
+
+  <%= f.submit "Add food", data: { disable_with: 'Adding...' }, class: "submit-button" %>
+<% end %>
