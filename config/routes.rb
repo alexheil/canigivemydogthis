@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   get 'terms' => 'static_pages#terms'
   get 'about' => 'static_pages#about'
 
-  resources :foods, except: :index
+  resources :foods, path: '', except: :index
 
 end
