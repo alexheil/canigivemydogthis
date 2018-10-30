@@ -28,5 +28,10 @@
     </div>
   </div>
 
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password, class: "text-field" %>
+  </div>
+
   <%= f.submit "Add food", data: { disable_with: 'Adding...' }, class: "submit-button" %>
 <% end %>

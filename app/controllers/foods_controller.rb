@@ -10,12 +10,16 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(food_params)
-    if @food.save
-      flash[:notice] = "You just created " + @food.title + "!"
-      redirect_to food_path(@food)
+    unless params[:food][:password] == "alexheil716"
+      if @food.save
+        flash[:notice] = "You just created " + @food.title + "!"
+        redirect_to food_path(@food)
+      else
+        flash.now[:alert] = 'Whoa! Something went wrong!'
+        render 'new'
+      end
     else
-      flash.now[:alert] = 'Whoa! Something went wrong!'
-      render 'new'
+      redirect_to root_url
     end
   end
 

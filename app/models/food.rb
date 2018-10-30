@@ -2,6 +2,8 @@ class Food < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
+  attr_accessor :password
+
   enum answer: [:yes, :no, :depends]
 
   scope :alphabetical, -> { order('foods.title ASC') }
