@@ -1,3 +1,5 @@
+<%= provide(:title, "Can I Give My Dog " + sanitize(@food.title) ) %>
+
 <div class="container">
 
   <div class="title padding center thin">
@@ -19,7 +21,7 @@
   <% end %>
 
   <div class="description padding thin">
-    <%= @food.description %>
+    <%= sanitize(@food.description) %>
   </div>
 
 </div>

@@ -6,8 +6,8 @@
 $main: #ADF5AD; /* OCEAN GREEN */
 $light: #FFD9B4; /* SPRING RAIN */
 $dark: #FF5C00; /* HOKEY POKEY */
-$black: #212121; /* GREEN KELP */
-$white: #ddd; /* FAFAFA DESERT STORM */
+$black: #202225; /* GREEN KELP */
+$white: #F3F2EE; /* FAFAFA DESERT STORM */
 $fancy: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 @mixin transition {
@@ -26,7 +26,7 @@ body {
   margin: 0;
   font-size: 20px;
   line-height: 1.5em;
-  letter-spacing: .0125em;
+  letter-spacing: .125px;
   font-family: $fancy;
   font-weight: 300;
   background: $black;
@@ -85,12 +85,9 @@ a {
   font-weight: 700;
 }
 
-.thin {
-  font-weight: 300;
-}
-
 .title {
   font-size: 2em;
+  line-height: 1.25em;
 }
 
 .yes {
@@ -104,7 +101,7 @@ a {
 }
 
 .depends {
-  font-size: 7em;
+  font-size: 4.5em;
   color: $light;
 }
 
@@ -121,4 +118,20 @@ a {
 .list {
   font-size: 1.5em;
   padding: 1vh 0;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .container {
+    width: 60%;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .container {
+    width: 90%;
+  }
+
 }
